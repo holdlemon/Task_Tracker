@@ -1,6 +1,5 @@
 from django.test import TestCase
 from rest_framework.test import APITestCase
-from django.utils import timezone
 from .models import Employee, Task
 from .serializers import EmployeeSerializer, TaskSerializer
 

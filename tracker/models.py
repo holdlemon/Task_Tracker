@@ -7,6 +7,7 @@ class Employee(models.Model):
     position = models.CharField(max_length=255)
     created_at = models.DateTimeField(default=timezone.now)
 
+
 class Task(models.Model):
     STATUS_CHOICES = [
         ('not_started', 'Не начата'),
