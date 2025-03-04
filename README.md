@@ -49,7 +49,14 @@ Task Tracker - серверное приложение для работы с б
 
 ### Запуск проекта
 
+Загрузите тестовые данные из фикстур с помощью кастомной команды add_test_data
+`python manage.py add_test_data`
+
 Для запуска проекта используйте команду `python manege.py runserver`
+
+### Запуска проекта с помощью Docker
+
+Для запуска проекта с помощью Docker используйте команду `docker-compose up -d --build`, либо `docker-compose up --build`.
 
 ### Тесты
 
