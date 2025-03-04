@@ -6,16 +6,22 @@ from .serializers import EmployeeSerializer, TaskSerializer
 
 
 class EmployeeViewSet(viewsets.ModelViewSet):
+    ''' Контролер для CRUD сотрудников '''
+
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
 
 
 class TaskViewSet(viewsets.ModelViewSet):
+    ''' Контролер для CRUD задач '''
+
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
 
 
 class BusyEmployeesView(views.APIView):
+    ''' Контролер для эндпоинта с занятыми сотрудниками '''
+
     def get(self, request):
         employees = Employee.objects.annotate(
             active_tasks_count=Count('tasks', filter=Q(tasks__status='in_progress'))
@@ -29,6 +35,8 @@ class BusyEmployeesView(views.APIView):
 
 
 class ImportantTasksView(views.APIView):
+    ''' Контролер для эндпоинта с важными задачами '''
+
     def get(self, request):
         # Фильтруем задачи:
         # 1. Статус задачи — "не запущена".

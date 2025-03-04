@@ -3,12 +3,16 @@ from django.utils import timezone
 
 
 class Employee(models.Model):
+    ''' Модель сотрудника '''
+
     full_name = models.CharField(max_length=255)
     position = models.CharField(max_length=255)
     created_at = models.DateTimeField(default=timezone.now)
 
 
 class Task(models.Model):
+    ''' Модель задачи '''
+
     STATUS_CHOICES = [
         ('not_started', 'Не начата'),
         ('in_progress', 'В работе'),

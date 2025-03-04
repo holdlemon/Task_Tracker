@@ -5,6 +5,7 @@ from tracker.models import Employee, Task
 
 
 class Command(BaseCommand):
+    ''' Кастомная команда для загрузки тестовых данных '''
     help = "Добавление тестовых данных из фикстур"
 
     def handle(self, *args, **kwargs):

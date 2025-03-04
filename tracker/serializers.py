@@ -4,6 +4,8 @@ from .models import Employee, Task
 
 
 class EmployeeSerializer(serializers.ModelSerializer):
+    ''' Сериализитор для модели сотрудника '''
+
     active_tasks_count = serializers.IntegerField(read_only=True)
 
     class Meta:
@@ -12,6 +14,8 @@ class EmployeeSerializer(serializers.ModelSerializer):
 
 
 class TaskSerializer(serializers.ModelSerializer):
+    ''' Сериализатор для модели задачи с валидацией данных '''
+
     class Meta:
         model = Task
         fields = '__all__'
