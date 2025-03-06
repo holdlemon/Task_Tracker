@@ -1,3 +1,5 @@
+from datetime import datetime, timedelta
+
 from django.test import TestCase
 from rest_framework.test import APITestCase
 from .models import Employee, Task
@@ -137,10 +139,14 @@ class TaskViewSetTest(APITestCase):
         self.assertEqual(response.data[0]['name'], "Сортировка файлов")
 
     def test_create_task(self):
+        # Получаем текущую дату и добавляем 1 день
+        current_date = datetime.now().date()
+        deadline_date = current_date + timedelta(days=1)
+
         data = {
             "name": "Новая задача",
             "assignee": self.employee.id,
-            "deadline": "2025-03-05",
+            "deadline": deadline_date.strftime("%Y-%m-%d"),
             "status": "not_started"
         }
         response = self.client.post('/api/tasks/', data, format='json')
