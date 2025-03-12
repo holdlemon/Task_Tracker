@@ -1,0 +1,98 @@
+[
+{
+    "model": "tracker.task",
+    "pk": 1,
+    "fields": {
+        "name": "Сортировка файлов",
+        "parent_task": null,
+        "assignee": 1,
+        "deadline": "2025-03-04",
+        "status": "in_progress",
+        "created_at": "2025-03-01T08:10:50.878Z"
+    }
+},
+{
+    "model": "tracker.task",
+    "pk": 3,
+    "fields": {
+        "name": "Верстка сайта",
+        "parent_task": null,
+        "assignee": 2,
+        "deadline": "2025-03-05",
+        "status": "in_progress",
+        "created_at": "2025-03-01T17:46:38.823Z"
+    }
+},
+{
+    "model": "tracker.task",
+    "pk": 4,
+    "fields": {
+        "name": "Создание собственных стилей",
+        "parent_task": 3,
+        "assignee": 2,
+        "deadline": "2025-03-05",
+        "status": "not_started",
+        "created_at": "2025-03-01T17:47:15.333Z"
+    }
+},
+{
+    "model": "tracker.task",
+    "pk": 5,
+    "fields": {
+        "name": "Разбор важных задач",
+        "parent_task": null,
+        "assignee": 3,
+        "deadline": "2025-03-06",
+        "status": "in_progress",
+        "created_at": "2025-03-02T17:23:39.936Z"
+    }
+},
+{
+    "model": "tracker.task",
+    "pk": 6,
+    "fields": {
+        "name": "Разбор мелких задач",
+        "parent_task": 5,
+        "assignee": 3,
+        "deadline": "2025-03-06",
+        "status": "not_started",
+        "created_at": "2025-03-02T18:50:33.566Z"
+    }
+},
+{
+    "model": "tracker.task",
+    "pk": 7,
+    "fields": {
+        "name": "Отчет о своей работе",
+        "parent_task": null,
+        "assignee": 3,
+        "deadline": "2025-03-04",
+        "status": "in_progress",
+        "created_at": "2025-03-02T19:02:02.840Z"
+    }
+},
+{
+    "model": "tracker.task",
+    "pk": 8,
+    "fields": {
+        "name": "Отчет о работе коллеги",
+        "parent_task": null,
+        "assignee": 3,
+        "deadline": "2025-03-04",
+        "status": "in_progress",
+        "created_at": "2025-03-02T19:03:39.055Z"
+    }
+},
+{
+    "model": "tracker.task",
+    "pk": 9,
+    "fields": {
+        "name": "Отчет о работе начальника",
+        "parent_task": null,
+        "assignee": 3,
+        "deadline": "2025-03-04",
+        "status": "in_progress",
+        "created_at": "2025-03-02T19:04:20.889Z"
+    }
+}
+]
